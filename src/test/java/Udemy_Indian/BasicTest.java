@@ -168,6 +168,7 @@ class BasicTest {
     }
 
     @Test
+    //findelements a lot of radio buttons
     void test9 () throws Exception {
         driver.get("https://rozetka.com.ua/notebooks/c80004/filter/producer=apple/");
         /*WebElement m = driver.findElement(By.xpath("//*[@id=\"filter_processor_136402\"]/label/a/span"));
