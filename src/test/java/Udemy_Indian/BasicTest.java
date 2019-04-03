@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -82,10 +83,10 @@ class BasicTest {
         System.out.println("BmwCheckBox selected? " + bmwCheckBox.isSelected());
         System.out.println("BenzCheckBox selected? " + benzCheckBox.isSelected());
         System.out.println("HondaCheckBox selected? " + hondaCheckBox.isSelected());
-
     }
 
     @Test
+        //radioButton
     void test4() throws Exception {
         boolean isChecked;
         driver.get("https://letskodeit.teachable.com/p/practice");
@@ -99,13 +100,11 @@ class BasicTest {
                 Thread.sleep(2000);
                 System.out.println("Батон не выбран, поэтому кликаю");
             }
-
-
         }
-
     }
 
     @Test
+        //dropDown
     void test5() throws Exception {
         driver.get("https://letskodeit.teachable.com/p/practice");
         WebElement dropDpown = driver.findElement(By.xpath("//select[@id=\"carselect\"]"));
@@ -126,7 +125,7 @@ class BasicTest {
         List<WebElement> options = sel.getOptions();
         int size = options.size();
 
-        for (int i = 0; i < size; i++){
+        for (int i = 0; i < size; i++) {
             String optionName = options.get(i).getText();
             System.out.println(optionName);
         }
@@ -134,7 +133,8 @@ class BasicTest {
     }
 
     @Test
-    void test6(){
+        //getTitle, getCurrentUrl
+    void test6() {
         driver.get("https://udhtu.edu.ua/en/");
         WebElement a = driver.findElement(By.xpath("//a[@class='icon'][1]"));
         a.click();
@@ -143,6 +143,47 @@ class BasicTest {
         System.out.println(title);
         System.out.println(url);
         driver.quit();
+    }
+
+    @Test
+        //getAttribute, submit,
+    void test7() {
+        driver.get(baseURL);
+        WebElement search = driver.findElement(By.xpath("//*[@id=\"tsf\"]/div[2]/div/div[1]/div/div[1]/input"));
+        search.sendKeys("selenium");
+        driver.findElement(By.xpath("//*[@id=\"tsf\"]/div[2]/div/div[3]/center/input[1]")).submit();
+        System.out.println(driver.findElement(By.xpath("//*[@id=\"tsf\"]/div[2]/div/div[2]/div/div[1]/input")).getAttribute("Value"));
+    }
+
+    @Test
+        //Xpath: contains, text. Method - getText
+    void test8() {
+        driver.get(baseURL);
+        WebElement link = driver.findElement(By.xpath("//a[@class=\"gb_d\" and contains (text(),'Gmail')]"));
+        System.out.println(link.getText());
+        link.click();
+        driver.navigate().back();
+        WebElement image = driver.findElement(By.xpath("//a[text()='Зображення']"));
+        image.click();
+    }
+
+    @Test
+    void test9 () throws Exception {
+        driver.get("https://rozetka.com.ua/notebooks/c80004/filter/producer=apple/");
+        /*WebElement m = driver.findElement(By.xpath("//*[@id=\"filter_processor_136402\"]/label/a/span"));
+        m.click();
+        Thread.sleep(2000);
+        WebElement i5 = driver.findElement(By.xpath("//*[@id=\"filter_processor_6269\"]/label/a/span"));
+        i5.click();*/
+        List<WebElement> processor = driver.findElements(By.xpath("//ul[@id=\"sort_processor\"]//li"));
+
+        int size = processor.size();
+
+
+        for (int i = 0; i < size; i++ ){
+            System.out.println(processor.get(i).getAttribute("value"));
+        }
+
 
 
 
