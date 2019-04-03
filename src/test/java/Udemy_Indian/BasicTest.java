@@ -1,3 +1,5 @@
+package Udemy_Indian;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -5,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -99,6 +102,49 @@ class BasicTest {
 
 
         }
+
+    }
+
+    @Test
+    void test5() throws Exception {
+        driver.get("https://letskodeit.teachable.com/p/practice");
+        WebElement dropDpown = driver.findElement(By.xpath("//select[@id=\"carselect\"]"));
+        Select sel = new Select(dropDpown);
+
+        Thread.sleep(2000);
+        System.out.println("Select Benz by value");
+        sel.selectByValue("benz");
+
+        Thread.sleep(2000);
+        System.out.println("Select Honda by value");
+        sel.selectByIndex(2);
+
+        Thread.sleep(2000);
+        System.out.println("Select Bmw by value");
+        sel.selectByVisibleText("BMW");
+
+        List<WebElement> options = sel.getOptions();
+        int size = options.size();
+
+        for (int i = 0; i < size; i++){
+            String optionName = options.get(i).getText();
+            System.out.println(optionName);
+        }
+
+    }
+
+    @Test
+    void test6(){
+        driver.get("https://udhtu.edu.ua/en/");
+        WebElement a = driver.findElement(By.xpath("//a[@class='icon'][1]"));
+        a.click();
+        String title = driver.getTitle();
+        String url = driver.getCurrentUrl();
+        System.out.println(title);
+        System.out.println(url);
+        driver.quit();
+
+
 
     }
 
