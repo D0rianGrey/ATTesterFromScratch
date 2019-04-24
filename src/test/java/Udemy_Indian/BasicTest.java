@@ -17,11 +17,13 @@ class BasicTest {
 
     WebDriver driver;
     String baseURL;
+    String baseURL2;
 
     @BeforeEach
     void setUp() {
         driver = new ChromeDriver();
         baseURL = "http://google.com.ua";
+        baseURL2 = "https://letskodeit.teachable.com/p/practice";
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
@@ -182,10 +184,44 @@ class BasicTest {
 
 
         for (int i = 0; i < size; i++ ){
-            System.out.println(processor.get(i).getAttribute("value"));
+            System.out.println(processor.get(i).getAttribute("textContent"));
         }
 
 
+
+
+    }
+
+    @Test
+    // multiple select, selectByValue,
+    void test10 () throws Exception{
+        driver.get(baseURL2);
+        WebElement element = driver.findElement(By.xpath("//select[@name=\"multiple-select-example\"]"));
+        Select sel = new Select(element);
+        Thread.sleep(2000);
+
+        sel.selectByValue("apple");
+        Thread.sleep(2000);
+
+        sel.selectByIndex(1);
+        Thread.sleep(2000);
+
+        sel.selectByVisibleText("Peach");
+        Thread.sleep(2000);
+
+        sel.deselectByVisibleText("Peach");
+        Thread.sleep(2000);
+
+        sel.selectByVisibleText("Peach");
+        Thread.sleep(2000);
+
+        List<WebElement> selectedOptions = sel.getAllSelectedOptions();
+        for (WebElement option : selectedOptions){
+            System.out.println(option.getText());
+        }
+
+        Thread.sleep(2000);
+        sel.deselectAll();
 
 
     }
