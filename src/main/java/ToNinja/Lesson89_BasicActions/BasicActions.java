@@ -1,4 +1,4 @@
-package ToNinja.Lesson89;
+package ToNinja.Lesson89_BasicActions;
 
 import java.util.concurrent.TimeUnit;
 import org.junit.After;

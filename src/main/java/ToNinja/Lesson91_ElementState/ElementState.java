@@ -1,4 +1,4 @@
-package ToNinja.Lesson91;
+package ToNinja.Lesson91_ElementState;
 
 import java.util.concurrent.TimeUnit;
 

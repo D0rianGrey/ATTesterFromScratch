@@ -1,4 +1,4 @@
-package ToNinja.Lesson90;
+package ToNinja.Lesson90_NavigatingBetweenPages;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
