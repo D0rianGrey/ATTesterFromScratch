@@ -7,7 +7,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -18,8 +18,7 @@ public class JoinPageTest {
 
     @Before
     public void setUp(){
-        System.setProperty("webdriver.gecko.driver", "C:\\Users\\student\\IdeaProjects\\testselenium\\drivers\\geckodriver.exe");
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://github.com/login");
@@ -28,7 +27,7 @@ public class JoinPageTest {
 
     @Test
     public void loginWithEmptyCredsTest(){
-        JoinPage newLoginPage =  joinPage.loginWithInvalidCreds("","");
+        JoinPage newLoginPage =  joinPage.loginWithInvalidCreds("","");// мы получаем neLoginPage при выполнении метода loginWithInvalidCrerds
         String error = newLoginPage.getErrorText();
         Assert.assertEquals("Incorrect username or password.", error);
     }
@@ -42,14 +41,14 @@ public class JoinPageTest {
 
     @Test
     public void createAccTest(){
-        SignUpPage signUpPage = joinPage.createAccount();
-        String heading = signUpPage.getHeadingText();
-        Assert.assertEquals("Join GitHub", heading);
+        SignUpPage signUpPage = joinPage.createAccount(); // создадим обьект класа SinUpPage, для этого мы выполним метод createAccount
+        String heading = signUpPage.getHeadingText(); // когда попадем на SignUpPage выполним метод getHeadingText и запишем его в переменную heading типа String
+        Assert.assertEquals("Join GitHub", heading); // указываем заголовок реальный и который лежит в переменной heading и сравниваем их
     }
 
     @After
     public void tearDown(){
-        driver.quit();
+        //driver.quit();
     }
 }
 

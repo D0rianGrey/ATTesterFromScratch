@@ -28,15 +28,15 @@ public class MainPageTest {
 
     @Test
     public void signInTest(){
-        JoinPage joinPage = mainPage.clickSignIn(); // что бы нажать на кнопку, нам надо создать обьект страницы JoinPage joinPage (на которую мы попадем), но нажимать мы будем путем метода, который относится к MainPage странице
+        JoinPage joinPage = mainPage.clickSignIn(); // что бы нажать на кнопку, нам надо создать обьект страницы JoinPage joinPage (на которую мы попадем), но нажимать мы будем путем метода, который относится к MainPage странице, но возвращает JoinPage
         String heading = joinPage.getHeadingText(); // проверяем текст который находится уже на странице JoinPage
         Assert.assertEquals("Sign in to GitHub", heading);
     }
 
     @Test
     public void registerFailTest(){
-        SignUpPage signUpPage = mainPage.register("testuser", "testemail", "testpass");
-        String error = signUpPage.getMainErrorText();
+        SignUpPage signUpPage = mainPage.register("testuser", "testemail", "testpass");// создаем страницу (обьект класса) SignUpPage (SignUpPage signUpPage) на которую мы перейдем путем метода register, который описан на странице  MainPage
+        String error = signUpPage.getMainErrorText(); // когда мы уже попали на страницу SignUpPage, мы можем  проверить тест главной ошибке
         Assert.assertEquals("There were problems creating your account.", error);
     }
 
