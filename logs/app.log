@@ -1,0 +1,3 @@
+20:52:03.968 DEBUG LoggingFile -Debug Message Logged
+20:52:03.973 ERROR LoggingFile -Error Message Logged
+20:52:03.974 FATAL LoggingFile -Fatal Message Logged
