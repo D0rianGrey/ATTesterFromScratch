@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parameters TestSuite">
+    <test name="Test 1">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="platform" value="mac"></parameter>
+        <parameter name="response" value="201,200"></parameter>
+        <parameter name="year" value="1991"></parameter>
+        <classes>
+            <class name="ToNinja.Lesson165_How_To_Provide_Parameters_To_Test_Methods.TestNG_Parameters"></class>
+        </classes>
+    </test>
+</suite>
