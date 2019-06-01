@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression TestSuite">
+    <test name="GroupsDemo">
+        <groups>
+            <run>
+                <include name="bikes"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="ToNinja.Lesson160_How_To_Group_Test_Methods_Part_1.TestNG_Grouping"></class>
+        </classes>
+    </test>
+</suite>

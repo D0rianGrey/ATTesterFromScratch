@@ -5,7 +5,7 @@
 	</Properties>
 	<Appenders>
 		<RollingFile name="File" fileName="${basePath}/app.log" filePattern="${basePath}/app-%d{yyyy-MM-dd}.log">
-			<PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %c{1} -%msg%n"/>
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %c{2} -%msg%n"/>
 			<Policies>
 				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
 				<SizeBasedTriggeringPolicy size="100 KB"/>
@@ -19,5 +19,11 @@
         <Root level="trace">
 			<AppenderRef ref="File"/>
 		</Root>
+		<Logger name="ToNinja.Lesson146_Using_Configuration_File_File_Logging" level="info" additivity="false">
+			<AppenderRef ref="File"/>
+		</Logger>
+		<Logger name="ToNinja.Lesson147_Working_With_Custom_Loggers" level="debug" additivity="false">
+			<AppenderRef ref="File"/>
+		</Logger>
 	</Loggers>
 </Configuration>
