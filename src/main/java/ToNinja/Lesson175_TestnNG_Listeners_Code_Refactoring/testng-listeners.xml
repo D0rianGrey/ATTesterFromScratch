@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Listeners TestSuite">
+    <listeners>
+        <listener class-name="ToNinja.Lesson175_TestnNG_Listeners_Code_Refactoring.CustomListeners"></listener>
+    </listeners>
+    <test name="Application Test 1">
+        <classes>
+            <class name="ToNinja.Lesson175_TestnNG_Listeners_Code_Refactoring.TestNG_ListenersTest1"></class>
+        </classes>
+    </test>
+    <test name="Application Test 2">
+        <classes>
+            <class name="ToNinja.Lesson175_TestnNG_Listeners_Code_Refactoring.TestNG_ListenersTest2"></class>
+        </classes>
+    </test>
+</suite>
