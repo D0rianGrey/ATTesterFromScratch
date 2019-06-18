@@ -1,0 +1,8 @@
+<suite name="Regression TestSuite">
+
+    <test name="FireFox Test">
+        <classes>
+            <class name="ToNinja.Lesson215_Maven_TestNG_Integration_And_Maven_Prpfiles.TestNG_TestSuite"></class>
+        </classes>
+    </test>
+</suite>
