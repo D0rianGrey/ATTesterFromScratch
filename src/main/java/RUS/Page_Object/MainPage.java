@@ -15,16 +15,16 @@ public class MainPage {
     private By userNameField = By.xpath("//*[@id=\"user[login]\"]");
     private By emailField = By.xpath("//*[@id=\"user[email]\"]");
     private By passwordField = By.xpath("//*[@id=\"user[password]\"]");
-    private By signUpFormButton = By.xpath("/html/body/div[4]/main/div[1]/div/div[2]/div[1]/div[1]/div/form/button");
+    private By signUpFormButton = By.xpath("//button[@class=\"btn-mktg btn-primary-mktg btn-large-mktg f4 btn-block my-3\"]");
 
     public JoinPage clickSignIn(){
         driver.findElement(signInButton).click();
         return new JoinPage(driver);
     }
 
-    public SignUpPage clickSignUp(){
+    public JoinPage clickSignUp(){
         driver.findElement(signUpButton).click();
-        return new SignUpPage(driver);
+        return new JoinPage(driver);
     }
 
     public SignUpPage clickSignUpFormButton(){

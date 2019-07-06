@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2019-06-15T15:37:33 EEST" name="Default Suite" finished-at="2019-06-15T15:38:00 EEST" duration-ms="26981">
+    <groups>
+    </groups>
+    <test started-at="2019-06-15T15:37:33 EEST" name="ATTesterFromScratch" finished-at="2019-06-15T15:38:00 EEST" duration-ms="26981">
+      <class name="ToNinja.Lesson177_Advanced_Reporting_Introduction_And_Features.SeleniumLoginTest">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:ToNinja.Lesson177_Advanced_Reporting_Introduction_And_Features.SeleniumLoginTest@10d59286]" started-at="2019-06-15T15:37:33 EEST" name="beforeClass" finished-at="2019-06-15T15:37:44 EEST" duration-ms="11257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="test1_validLoginTest()[pri:0, instance:ToNinja.Lesson177_Advanced_Reporting_Introduction_And_Features.SeleniumLoginTest@10d59286]" started-at="2019-06-15T15:37:44 EEST" name="test1_validLoginTest" finished-at="2019-06-15T15:37:59 EEST" duration-ms="14849" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1_validLoginTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:ToNinja.Lesson177_Advanced_Reporting_Introduction_And_Features.SeleniumLoginTest@10d59286]" started-at="2019-06-15T15:37:59 EEST" name="afterClass" finished-at="2019-06-15T15:38:00 EEST" duration-ms="813" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- ToNinja.Lesson177_Advanced_Reporting_Introduction_And_Features.SeleniumLoginTest -->
+    </test> <!-- ATTesterFromScratch -->
+  </suite> <!-- Default Suite -->
+</testng-results>

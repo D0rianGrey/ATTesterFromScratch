@@ -1,8 +1,6 @@
 package ToNinja.Lesson232_Perfomance_Testing_Going_The_System_Way;
 
 import org.testng.annotations.Test;
-
-import pageclasses.SearchPageFactory;
 //import utilities.Constants;
 //import utilities.ExcelUtility;
 
@@ -30,8 +28,6 @@ public class PerformanceTesting {
     @BeforeClass
     public void beforeClass() throws Exception {
         PropertyConfigurator.configure("log4j.properties");
-        System.setProperty("webdriver.gecko.driver",
-                "/Users/atomar/Documents/workspace_personal/selenium/geckodriver");
         driver = new FirefoxDriver();
         baseUrl = "https://www.expedia.com/";
         searchPage = new SearchPageFactory(driver);

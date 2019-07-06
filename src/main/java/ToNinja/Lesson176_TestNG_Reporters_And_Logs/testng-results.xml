@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="1" failed="1" skipped="1">
+  <reporter-output>
+    <line>
+      <![CDATA[TestNG_ReportsAndLogs -> This runs once before class]]>
+    </line>
+    <line>
+      <![CDATA[TestNG_ReportsAndLogs -> This runs before every method]]>
+    </line>
+    <line>
+      <![CDATA[TestNG_ReportsAndLogs -> testMethod2]]>
+    </line>
+    <line>
+      <![CDATA[TestNG_ReportsAndLogs -> This runs after every method]]>
+    </line>
+    <line>
+      <![CDATA[TestNG_ReportsAndLogs -> This runs before every method]]>
+    </line>
+    <line>
+      <![CDATA[TestNG_ReportsAndLogs -> testMethod1]]>
+    </line>
+    <line>
+      <![CDATA[TestNG_ReportsAndLogs -> This runs after every method]]>
+    </line>
+    <line>
+      <![CDATA[TestNG_ReportsAndLogs -> This runs once after class]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2019-06-15T13:34:52 EEST" name="Regression TestSuite" finished-at="2019-06-15T13:34:52 EEST" duration-ms="103">
+    <groups>
+    </groups>
+    <test started-at="2019-06-15T13:34:52 EEST" name="Application Test" finished-at="2019-06-15T13:34:52 EEST" duration-ms="103">
+      <class name="ToNinja.Lesson176_TestNG_Reporters_And_Logs.TestNG_ReportsAndLogs">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ToNinja.Lesson176_TestNG_Reporters_And_Logs.TestNG_ReportsAndLogs@306279ee]" started-at="2019-06-15T13:34:52 EEST" name="setUp" finished-at="2019-06-15T13:34:52 EEST" duration-ms="27" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[TestNG_ReportsAndLogs -> This runs once before class]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:ToNinja.Lesson176_TestNG_Reporters_And_Logs.TestNG_ReportsAndLogs@306279ee]" started-at="2019-06-15T13:34:52 EEST" name="beforeMethod" finished-at="2019-06-15T13:34:52 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[TestNG_ReportsAndLogs -> This runs before every method]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testMethod2()[pri:0, instance:ToNinja.Lesson176_TestNG_Reporters_And_Logs.TestNG_ReportsAndLogs@306279ee]" started-at="2019-06-15T13:34:52 EEST" name="testMethod2" finished-at="2019-06-15T13:34:52 EEST" duration-ms="4" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[did not expect to find [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: did not expect to find [true] but found [false]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:969)
+at org.testng.Assert.assertTrue(Assert.java:43)
+at org.testng.Assert.assertTrue(Assert.java:53)
+at ToNinja.Lesson176_TestNG_Reporters_And_Logs.TestNG_ReportsAndLogs.testMethod2(TestNG_ReportsAndLogs.java:41)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:131)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:570)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:170)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:790)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:143)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at org.testng.TestRunner.privateRun(TestRunner.java:763)
+at org.testng.TestRunner.run(TestRunner.java:594)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:398)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:392)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1146)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1067)
+at org.testng.TestNG.runSuites(TestNG.java:997)
+at org.testng.TestNG.run(TestNG.java:965)
+at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)
+at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[TestNG_ReportsAndLogs -> testMethod2]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testMethod2 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ToNinja.Lesson176_TestNG_Reporters_And_Logs.TestNG_ReportsAndLogs@306279ee]" started-at="2019-06-15T13:34:52 EEST" name="afterMethod" finished-at="2019-06-15T13:34:52 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[TestNG_ReportsAndLogs -> This runs after every method]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:ToNinja.Lesson176_TestNG_Reporters_And_Logs.TestNG_ReportsAndLogs@306279ee]" started-at="2019-06-15T13:34:52 EEST" name="beforeMethod" finished-at="2019-06-15T13:34:52 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[TestNG_ReportsAndLogs -> This runs before every method]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testMethod1()[pri:0, instance:ToNinja.Lesson176_TestNG_Reporters_And_Logs.TestNG_ReportsAndLogs@306279ee]" started-at="2019-06-15T13:34:52 EEST" name="testMethod1" finished-at="2019-06-15T13:34:52 EEST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[TestNG_ReportsAndLogs -> testMethod1]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testMethod1 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:ToNinja.Lesson176_TestNG_Reporters_And_Logs.TestNG_ReportsAndLogs@306279ee]" started-at="2019-06-15T13:34:52 EEST" name="afterMethod" finished-at="2019-06-15T13:34:52 EEST" duration-ms="2" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[TestNG_ReportsAndLogs -> This runs after every method]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="testMethod3()[pri:0, instance:ToNinja.Lesson176_TestNG_Reporters_And_Logs.TestNG_ReportsAndLogs@306279ee]" started-at="2019-06-15T13:34:52 EEST" name="testMethod3" finished-at="2019-06-15T13:34:52 EEST" depends-on-methods="ToNinja.Lesson176_TestNG_Reporters_And_Logs.TestNG_ReportsAndLogs.testMethod2" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestNG_ReportsAndLogs.testMethod3()[pri:0, instance:ToNinja.Lesson176_TestNG_Reporters_And_Logs.TestNG_ReportsAndLogs@306279ee] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestNG_ReportsAndLogs.testMethod3()[pri:0, instance:ToNinja.Lesson176_TestNG_Reporters_And_Logs.TestNG_ReportsAndLogs@306279ee] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:97)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at org.testng.TestRunner.privateRun(TestRunner.java:763)
+at org.testng.TestRunner.run(TestRunner.java:594)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:398)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:392)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1146)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1067)
+at org.testng.TestNG.runSuites(TestNG.java:997)
+at org.testng.TestNG.run(TestNG.java:965)
+at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73)
+at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod3 -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:ToNinja.Lesson176_TestNG_Reporters_And_Logs.TestNG_ReportsAndLogs@306279ee]" started-at="2019-06-15T13:34:52 EEST" name="cleanUp" finished-at="2019-06-15T13:34:52 EEST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[TestNG_ReportsAndLogs -> This runs once after class]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- ToNinja.Lesson176_TestNG_Reporters_And_Logs.TestNG_ReportsAndLogs -->
+    </test> <!-- Application Test -->
+  </suite> <!-- Regression TestSuite -->
+</testng-results>

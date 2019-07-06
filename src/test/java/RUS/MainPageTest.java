@@ -34,6 +34,13 @@ public class MainPageTest {
     }
 
     @Test
+    public void test(){
+        JoinPage joinPage = mainPage.clickSignUp();
+        String text = joinPage.getTextOnTheTop();
+        Assert.assertEquals("The best way to design, build, and ship software.",text);
+    }
+
+    @Test
     public void registerFailTest(){
         SignUpPage signUpPage = mainPage.register("testuser", "testemail", "testpass");// создаем страницу (обьект класса) SignUpPage (SignUpPage signUpPage) на которую мы перейдем путем метода register, который описан на странице  MainPage
         String error = signUpPage.getMainErrorText(); // когда мы уже попали на страницу SignUpPage, мы можем  проверить тест главной ошибке
@@ -56,6 +63,6 @@ public class MainPageTest {
 
     @After
     public void tearDown(){
-        //driver.quit();
+        driver.quit();
     }
 }

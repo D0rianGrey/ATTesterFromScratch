@@ -27,7 +27,7 @@ public class JoinPageTest {
 
     @Test
     public void loginWithEmptyCredsTest(){
-        JoinPage newLoginPage =  joinPage.loginWithInvalidCreds("","");// мы получаем neLoginPage при выполнении метода loginWithInvalidCrerds
+        JoinPage newLoginPage =  joinPage.loginWithInvalidCreds("","");// мы получаем newLoginPage при выполнении метода loginWithInvalidCrerds
         String error = newLoginPage.getErrorText();
         Assert.assertEquals("Incorrect username or password.", error);
     }

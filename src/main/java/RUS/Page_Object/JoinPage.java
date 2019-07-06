@@ -18,6 +18,9 @@ public class JoinPage {
     private By error = By.xpath(".//*[@id='js-flash-container']//div[@class='container']");
     private By createAccLink = By.xpath("//*[@id=\"login\"]/p/a");
 
+    private By textOnJoin = By.xpath("//*[contains(text(),\"The best way to design, build, and ship software.\")]");
+
+
     public JoinPage typeUsername(String username){
         driver.findElement(loginField).sendKeys(username);
         return this;
@@ -47,6 +50,12 @@ public class JoinPage {
         driver.findElement(createAccLink).click();
         return new SignUpPage(driver);
     }
+
+    public String getTextOnTheTop(){
+        return driver.findElement(textOnJoin).getText();
+    }
+
+
 
 
 
