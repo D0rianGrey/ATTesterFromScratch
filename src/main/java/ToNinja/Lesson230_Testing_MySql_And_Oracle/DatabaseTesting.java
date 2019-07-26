@@ -43,7 +43,7 @@ public class DatabaseTesting {
             // STEP 1: Register JDBC driver
             Class.forName(driver).getDeclaredConstructor().newInstance();
 
-            // STEP 2: Get connection to DB
+            // STEP 2: Get connection to DB_After
             System.out.println("Connecting to a selected database...");
             conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
             // conn = DriverManager.getConnection(DB_URL, props);

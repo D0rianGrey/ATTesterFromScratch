@@ -1,8 +1,7 @@
 package ToNinja.Lesson232_Perfomance_Testing_Going_The_System_Way;
 
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
-//import utilities.Constants;
-//import utilities.ExcelUtility;
 
 import org.testng.annotations.BeforeClass;
 import java.util.concurrent.TimeUnit;
@@ -10,11 +9,10 @@ import java.util.concurrent.TimeUnit;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import java.lang.reflect.Method;
 
-public class PerformanceTesting {
+class PerformanceTesting {
     long startTime;
     long endTime;
     long duration;
@@ -28,7 +26,9 @@ public class PerformanceTesting {
     @BeforeClass
     public void beforeClass() throws Exception {
         PropertyConfigurator.configure("log4j.properties");
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.gecko.driver",
+                "/Users/atomar/Documents/workspace_personal/selenium/geckodriver");
+        driver = new ChromeDriver();
         baseUrl = "https://www.expedia.com/";
         searchPage = new SearchPageFactory(driver);
 

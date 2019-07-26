@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
 public class ExplicitWaitWithUtilityDemo {
     private WebDriver driver;
     private String baseUrl;
@@ -19,7 +18,6 @@ public class ExplicitWaitWithUtilityDemo {
         driver = new ChromeDriver();
         baseUrl = "https://letskodeit.teachable.com/pages/practice";
         wt = new WaitTypes(driver);
-
         // Maximize the browser's window
         driver.manage().window().maximize();
     }
@@ -29,10 +27,8 @@ public class ExplicitWaitWithUtilityDemo {
         driver.get(baseUrl);
         WebElement loginLink = driver.findElement(By.linkText("Login"));
         loginLink.click();
-
         WebElement emailField = wt.waitForElement(By.id("user_email"), 3);
         emailField.sendKeys("test");
-
         //driver.findElement(By.id("user_email")).sendKeys("test");
     }
 
