@@ -6,14 +6,12 @@ import org.apache.commons.lang3.time.StopWatch;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import pageclasses.SearchPageFactory;
-import utilities.Constants;
-import utilities.ExcelUtility;
+
 
 public class PerformanceUsingStopWatch {
 
@@ -26,7 +24,7 @@ public class PerformanceUsingStopWatch {
     @BeforeClass
     public void beforeClass() throws Exception {
         PropertyConfigurator.configure("log4j.properties");
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         baseUrl = "https://www.expedia.com/";
         searchPage = new SearchPageFactory(driver);
 
