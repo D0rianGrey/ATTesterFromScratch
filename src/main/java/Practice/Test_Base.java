@@ -16,7 +16,7 @@ public class Test_Base {
     public WebDriverWait wait;
 
     @BeforeClass
-    public void setUP(){
+    public void setUP() {
 
         driver = new ChromeDriver();
         baseURL = "https://hsreplay.net";
@@ -26,12 +26,18 @@ public class Test_Base {
     }
 
     @Test
-    public void test(){
+    public void test() {
         driver.get(baseURL);
     }
 
+    @PCT_4000
+    @Test
+    public void test2() {
+
+    }
+
     @AfterClass
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
     }
 }
