@@ -33,6 +33,7 @@ public class Test_Base {
     @PCT_4000
     @Test
     public void test2() {
+        System.out.println("Test");
 
     }
 
